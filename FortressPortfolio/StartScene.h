@@ -1,0 +1,27 @@
+#pragma once
+
+// ½ÇÇà½ÃÄÖÀ»¶§ Á© ¸ÕÀú ³ª¿À´Â ¾À.
+
+class Button;
+
+class StartScene : public GameNode
+{
+//	RECT	selectButton;
+	Image*	startBackImg;
+	Button*	pButton;
+
+	int		nCount;
+	int		colorTurnIndex;
+	int		indexBlend;
+
+public:
+	StartScene();
+	~StartScene();
+
+	virtual bool Init();
+	virtual void Release();
+	virtual void Update();
+	virtual void Render(HDC hdc);
+
+	static void cbSceneChange();
+};
